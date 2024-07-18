@@ -60,6 +60,7 @@
             <span class="author-block">
               <a href="">Andrew Yuen</a>,
             </span>
+            <br>
             <span class="author-block">
               <a href="https://www.cs.cornell.edu/~snavely/">Noah Snavely</a>,
             </span>
@@ -205,7 +206,7 @@ Despite requiring neither ground truth masks nor monocular cues, our method outp
       </div>
      
     </div>
-    <p>We propose automatic mask generation from just user clicks, which generates segmentation masks for all the input views. in the first iteration, a user clicks a point on each object to generate a per-object anchor mask, which are then unprojected into 3D (here, we only show unprojected 3D points for the bottom can). 
+    <p>We propose a mask generation technique that generates segmentation masks for all the input views from just user clicks in one input view.. in the first iteration, a user clicks a point on each object to generate a per-object anchor mask, which are then unprojected into 3D (here, we only show unprojected 3D points for the bottom can). 
       These 3D points are subsequently projected back into each image view, while checking for occlusions. The projected points serve as seeds for SAM to generate masks for each object (bottom and top cans, door stop).
        To combine these individual segmentation masks into a single image, we use a depth ordering technique.
        In the next iterations, all views are used as anchor masks, allowing the pipeline to cover previously unseen regions.</p>
@@ -224,7 +225,7 @@ Despite requiring neither ground truth masks nor monocular cues, our method outp
       </div>
       <div class="item item-steve">
         <video poster="" id="steve"  controls muted loop playsinline height="100%">
-          <source src="./static/videos/mask_prop/scan_16.mp4"
+          <source src="./static/videos/mask_prop/scan_25.mp4"
                   type="video/mp4">
         </video>
       </div>
@@ -237,7 +238,7 @@ Despite requiring neither ground truth masks nor monocular cues, our method outp
       </div>
       <div class="item item-steve">
         <video poster="" id="steve"  controls muted loop playsinline height="100%">
-          <source src="./static/videos/mask_prop/scan_25.mp4"
+          <source src="./static/videos/mask_prop/scan_16.mp4"
                   type="video/mp4">
         </video>
       </div>
@@ -274,9 +275,9 @@ Despite requiring neither ground truth masks nor monocular cues, our method outp
     alt="Interpolate start reference image."/>
     
     <p>
-      We introduce a new benchmark for 3D scene decomposition techniques, consisting of 30 real-world scenes and 5 synthetically generated ones. The scenes contains different combinations of objects in close contact, and we provide a high-quality complete mesh of each object. 
       Previous scene decomposition techniques evaluate their methods on benchmark datasets like Replica and ScanNet. A critical limitation of these is that they do not offer complete ground truth geometries for the reconstructed objects. 
-      More specifically, per-object meshes are extracted from the full ground truth mesh of the indoor scene by cropping the ground truth mesh with the semantic masks and therefore lack completeness in regions occluded by other objects. 
+      We introduce a new benchmark for 3D scene decomposition techniques, consisting of 30 real-world scenes and 5 synthetically generated ones. The scenes contains different combinations of objects in close contact, and we provide a high-quality complete mesh of each object. 
+      We show samples of the captured real-world scene and scanned individual meshes, with the captured scene displayed below this paragraph and the scanned meshes above.
     </p> 
     <br> 
     <img src="static/images/scenes_1.png" alt="Image 1">
@@ -287,7 +288,7 @@ Despite requiring neither ground truth masks nor monocular cues, our method outp
 <section class="section" id="Acknowledgements">
   <div class="container is-max-desktop content">
     <h2 class="title is-3">Acknowledgements</h2>
-    We would like to thank Qianyi Wu, Kai Zhang, Aditya Chetan and Milky Hassena.  
+    We would like to thank Qianyi Wu for his quick email response and for answering our question regarding <a href="https://arxiv.org/abs/2308.07868">ObjectSDF++</a>, Kai Zhang and Aditya Chetan for their insightful discussions, and Milky Hassena for helping with the animations.
   </div>
 </section>
 <footer class="footer">
